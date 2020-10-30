@@ -7,9 +7,9 @@ def escalagrises(A):
         for j in range (0,len(A[0])):
             suma = 0
             for k in range(0,len(A[0][0])):
-                suma = A[i][j][k]
-                suma = int(suma/len(A[0][0]))
-                B[i][j]=suma
+                suma += A[i][j][k]
+            suma = int(suma/len(A[0][0]))
+            B[i][j]=suma
     return B
 #convolucion sin padding
 def sinpadding(A,B):
@@ -35,7 +35,7 @@ def whiteblack(A):
     for i range (0,len(A)):
         for j in range(0,len(A[0]):
                 if A[i][j]>128:
-                B[i][j]=255
+                    B[i][j]=255
     return B
     
 F = [[1, 1, 1],[1, 0, 1],[1, 1, 1]]
