@@ -1,0 +1,24 @@
+import cv2
+import numpy as np
+#funcion escala de grises
+def escalagrises(A):
+    B=np.zeros((A.shape))
+    for i in range (0,len(A)):
+        for j in range (0,len(A[0])):
+            suma = 0
+            for k in range(0,len(A[0][0])):
+                suma = A[i][j][k]
+                suma = int(suma/len(A[0][0]))
+                B[i][j]=suma
+    return B
+#convolucion sin padding
+def padding(A,B):
+    C = np.zeros(len (A),len A[0]))
+    for i in range (0, len(A)):
+        for j in range(0,len A[0])):
+            suma = 0
+            for p in range (0, len (B)):
+                for d in range(0,len(B[0])):
+                    suma +=A[i+p][j+d]*B[p][d]
+                    C[i][j]=suma
+    return C
