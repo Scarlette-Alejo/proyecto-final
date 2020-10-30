@@ -1,3 +1,5 @@
+import cv2 
+import numpy as np
 #funcion escala de grises
 def escalagrises(A):
     B=np.zeros(len A[0],len A[1])
