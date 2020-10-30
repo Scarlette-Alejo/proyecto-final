@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 #funcion escala de grises
 def escalagrises(A):
-    B=np.zeros(len A[0],len A[1])
+    B=np.zeros((len (A),len (A[0])))
     for i in range (0,len(A)):
         for j in range (0,len(A[0])):
             suma = 0
@@ -13,9 +13,9 @@ def escalagrises(A):
     return B
 #convolucion sin padding
 def sinpadding(A,B):
-    C = np.zeros(len (A),len A[0]))
+    C = np.zeros((len (A),len (A[0])))
     for i in range (0, len(A)):
-        for j in range(0,len A[0])):
+        for j in range(0,len (A[0])):
             suma = 0
             for p in range (0, len (B)):
                 for d in range(0,len(B[0])):
@@ -24,16 +24,16 @@ def sinpadding(A,B):
     return C
 #convolucion con padding
 def conpadding(A):
-    B = np.zeros((len(A)+2,len(a[0])+2))
+    B = np.zeros((len(A)+2,len(A[0])+2))
     for i in range(0,len(A)):
         for j in range(0,len(A[0])):
             B[i+1][j+1]=A[i][j]
     return
 #funcion white black
 def whiteblack(A):
-    B = np.zeros(len A[0],len A[1])
-    for i range (0,len(A)):
-        for j in range(0,len(A[0]):
+    B = np.zeros((len (A),len (A[0])))
+    for i in range (0,len(A)):
+        for j in range(0,len(A[0])):
                 if A[i][j]>128:
                     B[i][j]=255
     return B
